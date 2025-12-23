@@ -57,5 +57,4 @@ To build a machine learning model that accurately predicts customer churn based 
 ## 📌 Conclusion
 The ANN model effectively predicts customer churn and can support data-driven retention strategies.
 
----
-⭐ If you like this project, give it a star!
+

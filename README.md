@@ -1,49 +1,61 @@
-# Churn Prediction Using ANN
+
+# Customer Churn Prediction Using ANN
 
 ## 📌 Project Overview
-This project predicts customer churn using an Artificial Neural Network (ANN). It includes data preprocessing, feature engineering, model development, and evaluation.
+This project predicts whether a customer will churn (leave the company) using an **Artificial Neural Network (ANN)**. The goal is to help businesses proactively retain customers by identifying high-risk churn cases.
 
----
+## 🎯 Objective
+To build a machine learning model that accurately predicts customer churn based on demographic, behavioral, and account-related features.
 
-## 🚀 Technologies Used
+## 📊 Dataset
+- Source: Customer Churn Records
+- Rows: 10,000
+- Target Variable: `Exited`
+  - 1 → Customer churned
+  - 0 → Customer retained
+
+## 🛠 Tools & Technologies
 - Python
-- Pandas
-- Scikit-Learn
-- TensorFlow/Keras
-- One-Hot Encoding
-- StandardScaler
-- ANN Model (Dense + Dropout)
+- Pandas, NumPy
+- Scikit-learn
+- TensorFlow / Keras
+- Matplotlib, Seaborn
+
+## 🔍 Project Workflow
+1. Data Loading
+2. Data Cleaning & Preprocessing
+3. Encoding Categorical Variables
+4. Feature Scaling
+5. Train-Test Split
+6. ANN Model Building
+7. Model Training
+8. Model Evaluation
+
+## 🧠 ANN Architecture
+- Input Layer
+- Hidden Layer 1 (ReLU)
+- Hidden Layer 2 (ReLU)
+- Output Layer (Sigmoid)
+
+## 📈 Model Performance
+- Accuracy: ~80–85%
+- Evaluation Metrics:
+  - Confusion Matrix
+  - Classification Report
+
+## 💡 Business Insights
+- Inactive members have a higher churn rate
+- Low satisfaction score increases churn probability
+- Customer behavior shows non-linear patterns
+
+## 🚀 Future Improvements
+- SMOTE for class imbalance
+- Hyperparameter tuning
+- Model comparison (Random Forest, XGBoost)
+- Deployment using Streamlit or Flask
+
+## 📌 Conclusion
+The ANN model effectively predicts customer churn and can support data-driven retention strategies.
 
 ---
-
-## 🧠 Model Architecture
-```
-Input Layer → Dense(64, relu) → Dense(32, relu) → Dropout → Output(sigmoid)
-```
-
----
-
-## 📊 Evaluation Metrics
-- Accuracy Score  
-- Confusion Matrix  
-
----
-
-## 📁 Repository Structure
-```
-project/
-│── data/
-│── src/
-│── models/
-│── report/
-│── visuals/
-│── README.md
-```
-
----
-
-## ✨ How to Run
-1. Install dependencies  
-2. Run the preprocessing file  
-3. Train model  
-4. Evaluate results
+⭐ If you like this project, give it a star!

@@ -1,60 +1,123 @@
+# Customer Churn Prediction using Artificial Neural Network (ANN)
 
-# Customer Churn Prediction Using ANN
+## Overview
 
-## 📌 Project Overview
-This project predicts whether a customer will churn (leave the company) using an **Artificial Neural Network (ANN)**. The goal is to help businesses proactively retain customers by identifying high-risk churn cases.
+This project focuses on predicting customer churn using an Artificial Neural Network (ANN). The model analyzes customer demographic and banking information to determine whether a customer is likely to leave the bank or continue using its services.
 
-## 🎯 Objective
-To build a machine learning model that accurately predicts customer churn based on demographic, behavioral, and account-related features.
+Customer churn prediction helps businesses identify high-risk customers early and take proactive retention measures to reduce revenue loss and improve customer satisfaction.
 
-## 📊 Dataset
-- Source: Customer Churn Records
-- Rows: 10,000
-- Target Variable: `Exited`
-  - 1 → Customer churned
-  - 0 → Customer retained
+The project demonstrates the complete machine learning workflow including:
 
-## 🛠 Tools & Technologies
+- Data preprocessing
+- Feature engineering
+- Encoding categorical variables
+- Feature scaling
+- ANN model building
+- Model training and evaluation
+- Customer churn prediction
+
+---
+
+## Problem Statement
+
+Customer churn is a major challenge in the banking industry. Retaining existing customers is more cost-effective than acquiring new ones. This project aims to build a predictive deep learning model that can classify customers into:
+
+- **0 → Customer Stays**
+- **1 → Customer Leaves (Churns)**
+
+---
+
+## Dataset Information
+
+The dataset contains customer information such as:
+
+- Credit Score
+- Geography
+- Gender
+- Age
+- Tenure
+- Balance
+- Number of Products
+- Has Credit Card
+- Is Active Member
+- Estimated Salary
+- Exited (Target Variable)
+
+Target Variable:
+- `Exited = 1` → Customer churned
+- `Exited = 0` → Customer retained
+
+---
+
+## Technologies Used
+
 - Python
-- Pandas, NumPy
+- Pandas
+- NumPy
+- Matplotlib
 - Scikit-learn
-- TensorFlow / Keras
-- Matplotlib, Seaborn
+- TensorFlow
+- Keras
+- Jupyter Notebook
 
-## 🔍 Project Workflow
-1. Data Loading
-2. Data Cleaning & Preprocessing
-3. Encoding Categorical Variables
-4. Feature Scaling
-5. Train-Test Split
-6. ANN Model Building
-7. Model Training
-8. Model Evaluation
+---
 
-## 🧠 ANN Architecture
-- Input Layer
-- Hidden Layer 1 (ReLU)
-- Hidden Layer 2 (ReLU)
+## Machine Learning Workflow
+
+### 1. Data Preprocessing
+
+Performed:
+- Handling categorical variables
+- Label Encoding
+- One-Hot Encoding
+- Feature Scaling
+- Train-Test Splitting
+
+### 2. ANN Model Building
+
+Built an Artificial Neural Network using:
+- Dense hidden layers
+- ReLU activation function
+- Sigmoid output layer
+- Adam optimizer
+- Binary cross-entropy loss function
+
+### 3. Model Training
+
+The model was trained using:
+- Training dataset
+- Validation dataset
+- Backpropagation
+- Epoch optimization
+
+### 4. Model Evaluation
+
+Evaluated model performance using:
+- Accuracy Score
+- Confusion Matrix
+- Prediction Probability
+
+---
+
+## Model Architecture
+
+Input Layer → Hidden Layer → Hidden Layer → Output Layer
+
+Example:
+- Input Features
+- Dense Layer (ReLU)
+- Dense Layer (ReLU)
 - Output Layer (Sigmoid)
 
-## 📈 Model Performance
-- Accuracy: ~80–85%
-- Evaluation Metrics:
-  - Confusion Matrix
-  - Classification Report
+---
 
-## 💡 Business Insights
-- Inactive members have a higher churn rate
-- Low satisfaction score increases churn probability
-- Customer behavior shows non-linear patterns
+## Results
 
-## 🚀 Future Improvements
-- SMOTE for class imbalance
-- Hyperparameter tuning
-- Model comparison (Random Forest, XGBoost)
-- Deployment using Streamlit or Flask
+- Achieved approximately **86% accuracy**
+- Successfully predicted customer churn using ANN
+- Generated probability-based predictions for customer retention analysis
 
-## 📌 Conclusion
-The ANN model effectively predicts customer churn and can support data-driven retention strategies.
-
-
+Example Prediction:
+```python
+Prediction Output:
+Customer is likely to stay
